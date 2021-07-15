@@ -1,0 +1,19 @@
+Face-bluring --->
+
+
+requirements -
+
+		1- opencv (pip install opencv-python) (version 4.1.1 and above)
+		2- imutils (pip install imutils)
+		3- numpy  (pip install numpy)
+
+run this command -
+		for camera- python blur_face_video.py --face face_detector --method simple
+
+
+=> for external camera we have to change -blur_face_vedio.py
+								line no 38- vs = VideoStream(src=0).start() to vs = VideoStream(src='rtsp://admin:adtech@123@192.168.1.150:554/Streaming/Channels/2/').start()
+
+=> we have also change- face_blurring.py 
+ 					line no 22- return cv2.GaussianBlur(image, (kW, kH), 0) to return cv2.GaussianBlur(image, (kW, kH), 1)
+ 			
